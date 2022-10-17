@@ -1,4 +1,4 @@
-package vendasproject02.rest.controller;
+package vendasproject02.domain.entity.controller;
 
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.ExampleMatcher;
@@ -10,6 +10,7 @@ import vendasproject02.domain.entity.Produto;
 import vendasproject02.domain.repository.ClienteRepository;
 import vendasproject02.domain.repository.ProdutoRepository;
 
+import javax.validation.Valid;
 import java.util.List;
 
 import static org.springframework.http.HttpStatus.*;
@@ -34,7 +35,7 @@ public class ProdutoController {
 
     @PostMapping
     @ResponseStatus(CREATED)
-    public Produto save (@RequestBody Produto produto){
+    public Produto save (@RequestBody @Valid Produto produto){
       return produtoRepository.save(produto);
     }
 
@@ -53,7 +54,7 @@ public class ProdutoController {
 
     @PutMapping("{id}")
     @ResponseStatus(NO_CONTENT)
-    public void update (@PathVariable Integer id, @RequestBody Produto produto){
+    public void update (@PathVariable Integer id, @RequestBody @Valid Produto produto){
         produtoRepository
                 .findById(id)
                 .map( clienteExistente->{
