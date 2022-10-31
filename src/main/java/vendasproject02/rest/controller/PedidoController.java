@@ -1,4 +1,4 @@
-package vendasproject02.domain.entity.controller;
+package vendasproject02.rest.controller;
 
 import static org.springframework.http.HttpStatus.*;
 

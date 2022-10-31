@@ -1,4 +1,4 @@
-package vendasproject02.domain.entity.controller;
+package vendasproject02.rest.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.MethodArgumentNotValidException;
