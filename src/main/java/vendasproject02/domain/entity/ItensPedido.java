@@ -13,7 +13,7 @@ import javax.persistence.*;
 @Table(name = "itens_pedido")
 public class ItensPedido {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @ManyToOne
